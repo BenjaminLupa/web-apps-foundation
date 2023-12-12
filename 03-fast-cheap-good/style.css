@@ -1,0 +1,29 @@
+body {
+  height: 100vh;
+  display: flex;
+}
+.checkbox {
+  margin: auto;
+  padding: 20px;
+}
+
+#fast:checked {
+  accent-color: blue;
+}
+#fast:checked + label {
+  color: blue;
+}
+
+#cheap:checked {
+  accent-color: red;
+}
+#cheap:checked + label {
+  color: red;
+}
+
+#good:checked {
+  accent-color: orange;
+}
+#good:checked + label {
+  color: orange;
+}
