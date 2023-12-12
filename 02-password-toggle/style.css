@@ -1,0 +1,31 @@
+body {
+  height: 100vh;
+  display: flex;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  color: rgb(125, 30, 30);
+}
+
+.pw {
+  background-color: rgb(102, 121, 102);
+  padding: 50px;
+  margin: auto;
+  border-radius: 15px;
+}
+
+#pwInput {
+  border: none;
+  padding: 5px;
+  padding-inline-start: 15px;
+  border-radius: 5px;
+}
+
+#showPassword {
+  border: none;
+  background-color: rgb(196, 242, 255);
+  padding: 5px;
+  border-radius: 5px;
+  color: darkred;
+}
