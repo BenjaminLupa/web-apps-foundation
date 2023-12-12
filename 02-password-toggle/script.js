@@ -7,6 +7,11 @@ function changeInput() {
   } else {
     pw.type = "password";
   }
+  if (btnPw.innerText === "Show Password") {
+    btnPw.innerText = "Hide Password";
+  } else {
+    btnPw.innerText = "Show Password";
+  }
 }
 
 btnPw.addEventListener("click", changeInput);
