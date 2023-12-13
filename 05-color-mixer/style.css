@@ -1,0 +1,50 @@
+:root {
+  --redValue: 255;
+  --greenValue: 0;
+  --blueValue: 255;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 86vh;
+}
+
+header {
+  display: flex;
+  background-color: rgb(
+    var(--redValue),
+    var(--greenValue),
+    var(--blueValue),
+    0.6
+  );
+  margin: 0;
+  padding-block: 20px;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+}
+
+h2 {
+  margin-left: 20%;
+}
+
+#red {
+  accent-color: red;
+}
+#green {
+  accent-color: green;
+}
+#blue {
+  accent-color: blue;
+}
+
+.input {
+  margin-inline-start: 5%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(var(--redValue), var(--greenValue), var(--blueValue));
+}
