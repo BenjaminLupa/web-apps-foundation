@@ -5,6 +5,7 @@
 2.2) Die Values der Farben red, green & blue und die CSS variable an eine Function übergeben.
 2.3) Function erstellen um die CSS Variablen im root zu ändern.
 3) red green & blue .values in rgbNum.innerText um rgb auszugeben
+4) das rgb als Hexadezimal ausgeben
 */
 
 const red = document.querySelector("#red"); //1
@@ -29,6 +30,7 @@ function changeColor(customColor, colorValue) {
 }
 
 function convertRgb() {
+  //4
   let redVal = red.value;
   let greenVal = green.value;
   let blueVal = blue.value;
@@ -37,6 +39,7 @@ function convertRgb() {
   hexaNum.innerText = hexColorCode;
 }
 function getHexa(value) {
+  //4
   let hexa = parseInt(value).toString(16);
   return hexa.length == 1 ? "0" + hexa : hexa;
 }
