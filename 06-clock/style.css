@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background: linear-gradient(to right, hotpink, white);
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#digitalClock {
+  display: flex;
+  background: linear-gradient(hotpink, white);
+  width: 300px;
+  border-radius: 10px;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 50px;
+  border: 1px solid grey;
+}
+.hours {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  background-color: greenyellow;
+  padding: 10px;
+  margin: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.minuten {
+  background-color: red;
+}
+.sekunden {
+  background-color: yellow;
+}
+.named {
+  margin-inline-start: 5px;
+}
+
+#analogClock {
+  width: 300px;
+  height: 300px;
+  background-color: blanchedalmond;
+  opacity: 0.6;
+  border-radius: 50%;
+  position: relative;
+  margin-inline: auto;
+  border: 5px solid black;
+}
+.number {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  font-size: 25px;
+}
+.number1 {
+  transform: rotate(30deg);
+}
+.number2 {
+  transform: rotate(60deg);
+}
+.number3 {
+  transform: rotate(90deg);
+}
+.number4 {
+  transform: rotate(120deg);
+}
+.number5 {
+  transform: rotate(150deg);
+}
+.number6 {
+  transform: rotate(180deg);
+}
+.number7 {
+  transform: rotate(210deg);
+}
+.number8 {
+  transform: rotate(240deg);
+}
+.number9 {
+  transform: rotate(270deg);
+}
+.number10 {
+  transform: rotate(300deg);
+}
+.number11 {
+  transform: rotate(330deg);
+}
+.hand {
+  --rotation: 0;
+  position: absolute;
+
+  bottom: 50%;
+  left: 50%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 1px solid white;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.hour {
+  width: 10px;
+  height: 35%;
+  background-color: black;
+}
+.minute {
+  width: 7px;
+  height: 40%;
+  background-color: blueviolet;
+}
+.second {
+  width: 3px;
+  height: 45%;
+  background-color: red;
+}
+
+#analogClock::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  translate: -50% -50%;
+}
