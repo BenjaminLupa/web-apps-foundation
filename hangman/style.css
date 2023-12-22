@@ -1,0 +1,68 @@
+.listElement {
+  list-style: none;
+  width: 30px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.secretList {
+  border-bottom: 1px solid black;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.show-element {
+  visibility: hidden;
+}
+
+.solution-word {
+  font-size: 24px;
+  color: red;
+  border-bottom: 8px double red;
+}
+
+.right-word {
+  color: green;
+  border-color: green;
+}
+
+header {
+  display: flex;
+  width: 700px;
+  height: 100px;
+  background-color: red;
+  justify-content: space-between;
+  align-items: center;
+}
+#new-game {
+  height: 40px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 6px;
+}
+
+header p {
+  font-size: 25px;
+  margin-right: 20px;
+}
+#keyboard {
+  width: 700px;
+  background-color: blue;
+  text-align: center;
+}
+
+.keyboard-button {
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.showroom {
+  width: 700px;
+  background-color: aqua;
+  padding-block: 40px;
+}
