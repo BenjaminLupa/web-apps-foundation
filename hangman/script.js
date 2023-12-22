@@ -24,7 +24,9 @@ for (let i = 97; i <= 122; i++) {
 /*eventListener
 /////////////////*/
 keyboard.addEventListener("click", (e) => {
-  letterWordCheck(e);
+  if (e.target.innerText.length === 1) {
+    letterWordCheck(e);
+  }
 });
 newGameBtn.addEventListener("click", () => {
   location.reload();
@@ -60,25 +62,26 @@ function renderWord() {
     createWordLi.classList.add("listElement", "show-element");
     const textNode = document.createTextNode(e);
     keyboard.addEventListener("click", (targetBtn) => {
-      if (targetBtn.target.innerHTML === e.toLowerCase()) {
-        createWordLi.classList.remove("show-element");
-        guessedCounter.push(e);
-      }
-      if (guessedCounter.length === word.length) {
-        const creatP = document.createElement("p");
-        const resultText = document.createTextNode(
-          "Congrats! You find the searched Word "
-        );
-        const newSpanEl = document.createElement("span");
-        const resWord = document.createTextNode(word.join(""));
-        newSpanEl.appendChild(resWord);
-        newSpanEl.classList.add("solution-word", "right-word");
+      if (targetBtn.target.innerText.length === 1) {
+        if (targetBtn.target.innerHTML === e.toLowerCase()) {
+          createWordLi.classList.remove("show-element");
+          guessedCounter.push(e);
+        }
+        if (guessedCounter.length === word.length) {
+          const creatP = document.createElement("p");
+          const resultText = document.createTextNode(
+            "Congrats! You find the searched Word "
+          );
+          const newSpanEl = document.createElement("span");
+          const resWord = document.createTextNode(word.join(""));
+          newSpanEl.appendChild(resWord);
+          newSpanEl.classList.add("solution-word", "right-word");
 
-        creatP.appendChild(resultText);
-        creatP.appendChild(newSpanEl);
-        result.appendChild(creatP);
-
-        keyboard.classList.add("opa");
+          creatP.appendChild(resultText);
+          creatP.appendChild(newSpanEl);
+          result.appendChild(creatP);
+          keyboard.classList.add("opa");
+        }
       }
     });
     createWordLi.appendChild(textNode);
