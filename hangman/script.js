@@ -8,6 +8,19 @@ const result = document.querySelector("#result");
 const newGameBtn = document.querySelector("#new-game");
 /*///////////////////////////////////////////////////////*/
 
+//Create Keyboard
+///////////////////////
+for (let i = 97; i <= 122; i++) {
+  const keyBtn = document.createElement("button");
+  const char = document.createTextNode(String.fromCharCode(i));
+  keyBtn.appendChild(char);
+  keyBtn.classList.add("keyboard-button");
+  keyboard.appendChild(keyBtn);
+}
+///////////////////////////////////////////////////////////
+
+/*///////////////////////////////////////////////////////*/
+
 /*eventListener
 /////////////////*/
 keyboard.addEventListener("click", (e) => {
@@ -65,7 +78,7 @@ function renderWord() {
         creatP.appendChild(newSpanEl);
         result.appendChild(creatP);
 
-        keyboard.classList.add("show-element");
+        keyboard.classList.add("opa");
       }
     });
     createWordLi.appendChild(textNode);
@@ -79,6 +92,7 @@ function renderWord() {
 function letterWordCheck(e) {
   const checkingWord = word.join("").toLowerCase().split("");
   e.target.setAttribute("disabled", "true");
+  e.target.classList.add("opa");
   while (!checkingWord.includes(e.target.innerHTML)) {
     failCounter++;
     failCounterOutput.innerText = failCounter;
@@ -95,22 +109,10 @@ function letterWordCheck(e) {
       creatP.appendChild(resultText);
       creatP.appendChild(newSpanEl);
       result.appendChild(creatP);
-      keyboard.classList.add("show-element");
+      keyboard.classList.add("opa");
     }
     break;
   }
 }
 
-//Create Keyboard
-///////////////////////
-for (let i = 97; i <= 122; i++) {
-  const keyBtn = document.createElement("button");
-  const char = document.createTextNode(String.fromCharCode(i));
-  keyBtn.appendChild(char);
-  keyBtn.classList.add("keyboard-button");
-  keyboard.appendChild(keyBtn);
-}
-///////////////////////////////////////////////////////////
-
-/*///////////////////////////////////////////////////////*/
 renderWord();
